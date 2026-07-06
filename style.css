@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+/* APP LAYOUT */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: #111827;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* NAV BUTTONS */
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.nav-btn.active {
+  background: #2563eb;
+}
+
+/* DARK BUTTON */
+.dark-btn {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #374151;
+  color: white;
+}
+
+/* CONTENT AREA */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* PAGES */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* DARK CARDS */
+body.dark .card {
+  background: #1e293b;
+}
+
+/* HERO */
+.hero h1 {
+  font-size: 38px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}
+.hero-grid {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* IMAGE STYLE */
+.hero-image img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #2563eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* TEXT ALIGN */
+.hero-text h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.hero-text h3 {
+  margin-top: 5px;
+  color: #6b7280;
+}
+
+/* DARK MODE SUPPORT */
+body.dark .hero-text h3 {
+  color: #cbd5e1;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 130px;
+    height: 130px;
+  }
+}
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+body.dark .resume-btn {
+  background: #3b82f6;
+}
